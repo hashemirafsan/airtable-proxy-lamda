@@ -72,6 +72,7 @@ router.post("/v0/:baseId/:tableName", async (req, res) => {
         Authorization: `Bearer ${secretItem?.Item.SecretKey}`,
         "X-Airtable-Client-Secret": AIRTABLE_CLIENT_SECRET_KEY,
       },
+      params: req.query,
     }
   );
 
